@@ -4,7 +4,7 @@ import Team from './Team.js';
 import PokemonType from './Pokemon_type.js';
 import TeamPokemon from './Team_pokemon.js';
 
-// Relations entre Pokémon et Type, many-to-many
+// Relations entre Pokemon et Type, many-to-many
 Pokemon.belongsToMany(Type, {
     through: PokemonType,
     foreignKey: 'pokemon_id',
@@ -16,7 +16,7 @@ Pokemon.belongsToMany(Type, {
     otherKey: 'pokemon_id',
   });
   
-  // Relations entre Team et Pokémon many-to-many par TeamPokemon
+  // Relations entre Team et Pokemon many-to-many par TeamPokemon
   Team.belongsToMany(Pokemon, {
     through: TeamPokemon,
     foreignKey: 'team_id',
