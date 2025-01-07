@@ -25,6 +25,7 @@ const pokemonController = {
     }
   },
 
+
   // Récupérer les Pokémon par type
   async getTypeWithPokemons(req, res) {
     try {
@@ -40,7 +41,7 @@ const pokemonController = {
       const pokemonTypes = await PokemonType.findAll({ where: { type_id: id } });
 
       const pokemonIds = pokemonTypes.map((pokemonType) => pokemonType.pokemon_id);
-      const pokemons = await Pokemon.findAll({ where: { id: pokemonIds } });
+      const pokemons = await Pokemon.findAll({ where: { id: pokemonIds } });  
 
       res.status(200).json({ type, pokemons });
     } catch (error) {

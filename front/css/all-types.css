@@ -1,0 +1,37 @@
+.type-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.type-card:hover {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+}
+
+.type-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.type-card button {
+  margin-top: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.type-card button:hover {
+  background-color: #555;
+}
