@@ -5,16 +5,25 @@ async function fetchTypes() {
   }
   
   function displayTypes(types) {
-    const app = document.getElementById('app');
-    app.innerHTML = '';
+    const container = document.getElementById('app');
+    container.innerHTML = '';
+  
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.classList.add(
+      'is-flex',
+      'is-flex-wrap-wrap',
+      'is-justify-content-center'
+    );
   
     types.forEach((type) => {
-      const card = document.createElement('div');
-      card.classList.add('type-card');
-      card.style.backgroundColor = `#${type.color}`;
-      card.innerHTML = `<h2>${type.name}</h2>`;
-      app.appendChild(card);
+      const button = document.createElement('button');
+      button.classList.add('button', 'type-button');
+      button.style.backgroundColor = `#${type.color}`;
+      button.textContent = type.name;
+      buttonsContainer.appendChild(button);
     });
+  
+    container.appendChild(buttonsContainer);
   }
   
   fetchTypes();
