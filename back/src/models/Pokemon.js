@@ -41,4 +41,4 @@ const Pokemon = sequelize.define('Pokemon', {
     timestamps: false,
   });
   
-  export default Pokemon;
+export { Pokemon };

@@ -20,4 +20,4 @@ const Type = sequelize.define('Type', {
   timestamps: false,
 });
 
-export default Type;
+export { Type };

@@ -16,12 +16,12 @@ L'important étant de pratiquer de bout en bout au moins une feature complète e
 
 | En tant que | je souhaite pouvoir                        | afin de                               |
 | ----------- | ------------------------------------------ | ------------------------------------- |
-| visiteur    | consulter la page des Pokémons             | voir la liste des Pokémons existants  |
-| visiteur    | consulter la page/modale d'un Pokémon             | consulter ses caractéristiques        |
+| visiteur    | consulter la page des Pokémons             | voir la liste des Pokémons existants  |   FAIT
+| visiteur    | consulter la page/modale d'un Pokémon      | consulter ses caractéristiques        |   FAIT (Revoir la barre qui se remplit)
 | visiteur    | consulter la page récapitulative des types | lister les différents types existants |
 | visiteur    | consulter la page récupitulative d'un type | lister les Pokémons de ce type        |
 | visiteur    | consulter la page de mes équipes           | les administrer                       |
-| visiteur    | consulter la page/modale d'une équipe             | l'administrer                         |
+| visiteur    | consulter la page/modale d'une équipe      | l'administrer                         |
 
 ## Version 2
 
