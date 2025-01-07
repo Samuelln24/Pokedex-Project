@@ -20,4 +20,4 @@ const PokemonType = sequelize.define('PokemonType', {
     timestamps: false,
   });
   
-  export default PokemonType;
+  export { PokemonType };
