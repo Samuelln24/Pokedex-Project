@@ -5,6 +5,7 @@ import { teamsController } from '../controllers/teamsController.js';
 
 // Route pour obtenir toutes les équipes
 teamsRouter.get('/teams', teamsController.getAllTeams);
+teamsRouter.post('/add-teams', teamsController.createTeams);
 
 
 
