@@ -9,6 +9,7 @@ async function fetchPokemons() {
     }
     const pokemons = await response.json();
     displayPokemons(pokemons);
+    
   } catch (error) {
     console.error('Erreur:', error);
   }
