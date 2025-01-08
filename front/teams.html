@@ -30,6 +30,9 @@
     <!-- Custom CSS-->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/teams.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/teams.css" /> -->
+    
   </head>
 
   <body>
@@ -48,17 +51,43 @@
       </nav>
     </header>
 
+
+
     <main
       id="app"
-      class="container is-flex is-align-item-center is-flex-wrap-wrap is-justify-content-space-evenly my-6"
-    >
+      class="container is-flex is-align-item-center is-flex-wrap-wrap is-justify-content-space-evenly my-6">
       
+      <!-- Formulaire pour créer une équipe -->
+      <form id="create-team-form" class="form-create-team box">
 
-      <!-- DO YOUR WORK HERE -->
+        <div class="field">
+          <label class="label" for="name">Entrez le nom de votre équipe:</label>
+          <div class="control">
+          <input class="input" type="text" name="name" id="name" placeholder="Nom de l'équipe" required />
+        </div>
+      </div>
+
+        <div class="field">
+          <label class="label" for="description">Entrez votre description :</label>
+          <div class="control">
+          <input class="input" type="text" name="description" id="description" placeholder="Description de l'équipe" required />
+        </div>
+      </div>
+
+        <div class="field">
+          <div class="control">
+          <input class="button is-primary" type="submit" value="Valider mon équipe !" />
+        </div>
+      </div>
+      <div id="error-message" style="display: none; color: red;"></div>
+      <div id="success-message" style="display: none; color: green;"></div>
+      </form>
+
 
     </main>
 
     <!-- ADD YOUR SCRIPTS HERE -->
-     <script type="module" src="./js/teams.js"></script>
+    <script type="module" src="./js/teams.js"></script>
+     <script type="module" src="./js/create-teams.js"></script>
   </body>
 </html>
