@@ -19,4 +19,4 @@ const Team = sequelize.define('Team', {
     timestamps: false,
   });
   
-  export default Team;
+  export { Team };
