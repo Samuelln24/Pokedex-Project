@@ -34,12 +34,13 @@ body {
   }
   
   /* Conteneur principal */
-  main#app {
+  #team-display {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: flex-start;
   }
   
   /* Style des cartes d'équipes */
@@ -50,6 +51,7 @@ body {
     width: 300px;
     padding: 15px;
     transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
   }
   
   .list:hover {

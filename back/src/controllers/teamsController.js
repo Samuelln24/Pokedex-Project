@@ -1,4 +1,8 @@
 import { Team } from '../models/Team.js';
+//import {TeamPokemon} from '../models/TeamPokemon.js'
+import { Pokemon } from '../models/Pokemon.js';
+//import { Pokemon, Team } from '../models/associations.js';
+
 
 const teamsController = {
     // Récupérer toutes les équipes
@@ -45,7 +49,36 @@ const teamsController = {
             res.status(500).json({error: "Une erreur est survenue lors de la création d'une équipe."});
         }
     },
-}
 
+    async addPokemonToTeam(req,res) {
+        
+            const { idPokemon, idTeam } = req.body;
+
+            const pokemon = await Pokemon.findByPk(idPokemon);
+            if (!pokemon) {
+                return res.status(404).json({ error: 'Pokemon non trouvé' });
+            }
+
+            const team = await Team.findByPk(idTeam, {
+                include: [
+                    {
+                        association: "Pokemon",
+                        include: "types",
+                    },
+                ],
+            });
+            if (!team) {
+                return res.status(404).json({ error: 'Equipe non trouvée' });
+            }
+
+            
+            await team.addPokemon(pokemon);
+            await team.reload();
+            if (team.pokemons.lenght >= 3) {
+                return res.status(200).json(team);
+            }
+        }
+
+}
 
 export { teamsController };

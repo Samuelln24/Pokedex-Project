@@ -20,4 +20,4 @@ const TeamPokemon = sequelize.define('TeamPokemon', {
     timestamps: false,
   });
   
-  export default TeamPokemon;
+  export { TeamPokemon };

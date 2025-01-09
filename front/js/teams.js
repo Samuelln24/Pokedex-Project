@@ -19,20 +19,20 @@ async function fetchTeams() {
 
 // Fonction pour afficher un message de chargement
 function displayLoading() {
-    const app = document.getElementById('app');
+    const app = document.getElementById('team-display');
     app.innerHTML = `<p class="has-text-centered has-text-info">Chargement des équipes...</p>`;
 }
 
 // Fonction pour afficher une erreur
 function displayError() {
-    const app = document.getElementById('app');
+    const app = document.getElementById('team-display');
     app.innerHTML = `<p class="has-text-centered has-text-danger">Impossible de charger les équipes. Veuillez réessayer plus tard.</p>`;
 }
 
 // Fonction pour afficher les equipes dans le DOM
 
 function displayTeams(teams) {
-    const app = document.getElementById('app');
+    const app = document.getElementById('team-display');
     app.innerHTML = '';
 
 

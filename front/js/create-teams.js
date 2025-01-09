@@ -17,7 +17,7 @@ function showSuccess(message) {
     successDiv.style.display = 'block';
   setTimeout(() => {
     successDiv.style.display = 'none';
-   }, 2000);
+   }, 4000);
 }
 
 // Cette fonction est faite pour créer une équipe
@@ -46,8 +46,8 @@ async function createTeam(event) {
         return showError(maybeNewTeam.error || 'Une erreur est survenue.');
     }
 
-    console.log('Équipe créée avec succès :', maybeNewTeam);
-    //showSuccess('Equipe créer avec succès !');
+    //console.log('Équipe créée avec succès :', maybeNewTeam);
+    showSuccess('Equipe créer avec succès !');
 
     form.reset();
 
@@ -58,13 +58,13 @@ async function createTeam(event) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM chargé');
+    //console.log('DOM chargé');
     const form = document.getElementById('create-team-form');
     if (!form) {
         console.error("Le formulaire 'create-team-form' est introuvable.");
         return;
     }
-    console.log('Formulaire trouvé :', form);
+   // console.log('Formulaire trouvé :', form);
     form.addEventListener('submit', createTeam);
 
     
